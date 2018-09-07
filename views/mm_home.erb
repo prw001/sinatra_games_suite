@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<div id='content_container'>
+		<h3 id='rules_title'>The Rules of Mastermind:
+		</h3>
+		<ul id='rule_list'>
+			<li>A secret, 4-element code is generated for you to guess.  You must guess the correct sequence in 12 turns.
+			</li>
+			<li>There are 6 possible colors for each of the elements, and the colors can repeat.
+			</li>
+			<li>Each turn you can guess a four-element sequence, and feedback will be provided on the right-hand side of the board with colored pegs:
+				<ul id='sub_rule_list'>
+					<li>White orbs indicate that you've correctly guessed a color, but not its correct position.
+					</li>
+					<li>Orange orbs indicate that you've correctly guessed a color and its position.
+					</li>
+					<li>One orb of either type is awarded per match. Example: If there are two green orbs in the code, and the player guesses one green orb, only one orb is awarded as hints.<br>Likewise, if the player guesses three green orbs in that same scenario, only two orbs are awarded as hints, not three.
+					</li>
+				</ul>
+			</li>
+			<li>Use the Color Selector below the board to build your code:
+				<ul id='selector_instructions'>
+					<li>Pick each color for you guess from the dropdown menus.
+					</li>
+					<li>Click the 'Clear' button at any time to clear your current selections.
+					</li>
+					<li>Click the 'Guess!' button to submit your guess.
+					</li>
+				</ul>
+			</li>
+		</ul>
+		<div id='home_content_footer'>
+			<a id='play_link' href='/newgame'>
+				<button id='play_button'>Play!
+				</button>
+			</a>
+		<div>
+	</div>
+</html>

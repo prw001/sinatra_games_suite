@@ -1,0 +1,103 @@
+body{
+	margin: 0;
+	background: #ece9e5;
+}
+
+textarea{
+	font-size: 20px;
+}
+
+option{
+	font-size: 18px;
+}
+
+#title_box{
+	text-align: center;
+	background: #bfa283;
+	margin-left: 35%;
+	margin-right: 35%;
+	border-radius: 4px;
+	box-shadow: 0px 1px 1px 1px lightgray;
+	height: 70px;
+	min-width: 400px;
+}
+
+#main_title{
+	font-size: 42px;
+	font-family: Arial, sans-serif;
+	color: #23370de6;
+	width: auto;
+	padding-top: 10px;
+}
+
+#instruction_box{
+	position: relative;
+	width: auto;
+	margin-left: 35%;
+	margin-right: 35%;
+	margin-top: 40px;
+	border: 1px solid #23370de6;
+	border-radius: 4px;
+	padding: 10px;
+	min-width: 380px;
+}
+
+#instruction_para{
+	font-family: Arial;
+	color: #20204d;
+	font-size: 22px;
+	line-height: 28px;
+}
+
+#input_form_box{
+	margin-left: 35%;
+	margin-right: 35%;
+	margin-top: 34px;
+	min-width: 400px;
+}
+
+#message_form{
+	padding: 0 10% 0 10%;
+}
+
+#text_area{
+	display: block;
+	width: 100%;
+	height: 25%;
+	margin-bottom: 10px;
+	border-radius: 2px;
+	border: 1px inset #134713;
+}
+
+#key_dropdown{
+	display: inline-block;
+	height: 40px;
+	font-size: 18px;
+}
+
+#submit_button{
+	position: relative;
+	display: inline-block;
+	float: right;
+	height: 40px;
+	width: 170px;
+	border-radius: 10px;
+	background: #ebeccb;
+	borer: 2px outset #6d6161;
+	font-size: 18px;
+}
+
+#new_message_box{
+	position: relative;
+	margin-left: 30%;
+	margin-right: 30%;
+	margin-top: 32px;
+	height: 100px;
+	min-width: 500px;
+	border: 1px solid black;
+	text-align: center;
+}
+
+#new_message{
+
+}

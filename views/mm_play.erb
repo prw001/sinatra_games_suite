@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<div id='gameboard_container'>
+		<div id='gameboard'>
+		<div id='helper_text_column'>
+			<h5 class='helper_text'>Correct color and position</h5><div id='helper_pm' class='perfect_match'></div>
+			<h5 class='helper_text'>Correct color, wrong position  <div id='helper_cm' class='color_match'></div></h5>
+			<h5 class='helper_text'>Empty  <div id='helper_nm' class='no_match'></div></h5>
+		</div>
+			<% 12.times do |row_index| %>
+				<div class='guess_slots_container'>
+					<% 4.times do |slot_index| %>
+						<% if game.rows[row_index][slot_index] %>
+							<% case game.rows[row_index][slot_index] %>
+							<% when 'r' %>
+								<div class='red_guess'></div>
+							<% when 'o' %>
+								<div class='orange_guess'></div>
+							<% when 'y' %>
+								<div class='yellow_guess'></div>
+							<% when 'g' %>
+								<div class='green_guess'></div>
+							<% when 'b' %>
+								<div class='blue_guess'></div>
+							<% else %>
+								<div class='violet_guess'></div>
+							<% end %>
+						<% else %>
+							<div class='empty_guess_slot'>
+							</div>
+						<% end %>
+					<% end %>
+				</div>
+				<div class='divider'>
+				</div>
+				<div class='hint_slots_container'>
+					<% 4.times do |hint_index| %>
+						<% if hint_index == 2 %>
+							<br>
+						<% end %>
+						<% if game.hints[row_index][hint_index] %>
+							<% if game.hints[row_index][hint_index] == '+' %>
+								<div class='perfect_match'></div>
+							<% else game.hints[row_index][hint_index] == 'o' %> 
+								<div class='color_match'></div>
+							<% end %>
+						<% else %>
+							<div class='no_match'></div>
+						<% end %>
+					<% end %>
+				</div>
+				<br>
+			<% end %>
+		</div>
+		<div id='code_selector_container'>
+			<div id='code_selector'>
+				<div id='current_guess_container'>
+					<form id='guess_form' action ='/guess'>
+						<% 4.times do |index| %>
+						<span class='slot_container'>
+						<%= (index + 1).to_s %><br>
+							<select class='select_dropdown' name='slot_<%=(index + 1).to_s%>'>
+								<% 6.times do |color_index| %>
+									<option value='<%= game.colors[color_index] %>'>
+										<%= game.colors[color_index] %>
+									</option>
+								<% end %>
+							</select>
+						</span>
+						<% end %>
+						<div id='guess_or_clear_container'>
+							<button id='guess_button'>Guess!
+							</button>
+					</form>
+					<form id='clear_form' action='/guess'>
+						<button id='clear_button'>Clear
+						</button>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</html>

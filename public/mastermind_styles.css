@@ -1,0 +1,480 @@
+/* index.erb */
+
+body{
+	margin: 0;
+	padding: 0;
+	background: #030f20;
+}
+
+@font-face{
+	font-family: DarkFuture;
+	src: url('./fonts/Dark_Future/Dark_Future_Italic.ttf');
+}
+
+#main_container{
+	margin-left: 32%;
+	margin-top: 50px;
+	width: 582px;
+	background-image: url('./images/hyperspace.jpg');
+	height: 743px;
+	border: 3px solid lightblue;
+	box-shadow: 0px 0px 40px 10px #b9d0d84d;
+}
+
+#title_box{
+	position: relative;
+	text-align: center;
+	top: -24px;
+}
+
+#title{
+	margin: 25px 0px 0px 0px;
+	padding-top: 6px;
+	font-size: 50px;
+	line-height: 46px;
+	color: #ceece5e6;
+	background: #011501cc;
+	font-family: DarkFuture;
+	text-shadow: -5px 0px #dfdfcf33;
+}
+
+#content_container{
+	position: relative;
+	padding: 0px 30px 0px 10px;
+	height: 700px;
+	top: -48px;
+	background: #011501cc;
+	font-family: Futura;
+	color: antiquewhite;
+}
+
+/* home.erb */
+
+#intro_and_rules{
+
+}
+
+#rules_title{
+	position: relative;
+	top: 10px;
+	text-align: center;
+	font-family: Futura;
+
+}
+
+#home_content_footer{
+	text-align: center;
+}
+
+#play_button{
+	position: relative;
+	bottom: 10px;
+	height: 40px;
+	width: 150px;
+	border: 2px outset silver;
+	border-top-right-radius: 50px;
+	border-top-left-radius: 50px;
+	background: #789c9c;
+	font-family: DarkFuture;
+	font-size: 28px;
+	color: #eded3f;
+}
+
+#play_button:hover{
+	box-shadow: 0px 0px 8px 4px #eded3f4d;
+	background: #528e8e;
+	color: #f2f22a;
+	cursor: pointer;
+}
+
+#play_button:active{
+	border: 2px inset silver;
+	background: #516d6d;
+	box-shadow: none;
+	color: #a9e833;
+}
+
+/* play.erb */
+
+#spacer{
+
+}
+
+#gameboard_container{
+	position: relative;
+	top: -24px;
+	padding-top: 19px;
+	padding-left: 10px;
+	background: #011501cc;
+	height: 671px;
+	color: antiquewhite; /*temporary*/
+}
+
+#gameboard{
+	padding-left: 32px;
+}
+
+#helper_text_column{
+	height: 500px;
+	width: 120px;
+	background: transparent;
+	position: relative;
+	display: inline-block;
+	clear: left;
+	float: left;
+	right: 35px;
+}
+
+.helper_text{
+	position: relative;
+	display: inline-block;
+	margin: 5px 10px 10px 0;
+	top: 180px;
+	left: 10px;
+	font-family: Futura;
+	font-weight: 200;
+	font-style: italic;
+	color: #cde8e8;
+}
+
+#helper_pm{
+	display: inline-block;
+	top: 146px;
+	left: 105px;
+}
+
+#helper_cm{
+	bottom: 27px;
+	left: 106px;
+}
+
+#helper_nm{
+	top: 4px;
+	left: 4px;
+}
+
+.guess_slots_container{
+	position: relative;
+	display: inline-block;
+}
+
+.red_guess{
+	position: relative;
+	display: inline-block;
+	min-height: 36px;
+	min-width: 36px;
+	background: linear-gradient(320deg, rgba(255,0,0,.8), rgba(165, 91, 91, 0.8) 99%), linear-gradient(20deg, rgba(198, 0, 0, 0.8), #ff9696 98%);
+	border: 1px outset #cf7e7e;
+	border-radius: 50px;
+	margin: 0 6px 1px 6px;
+	box-shadow: 3px 3px 3px 3px #2f1107cc;
+}
+
+.orange_guess{
+	position: relative;
+	display: inline-block;
+	min-height: 36px;
+	min-width: 36px;
+	background: linear-gradient(320deg, rgba(255, 95, 0, 0.8), rgba(212, 154, 112, 0.8) 99%), linear-gradient(20deg, rgba(216, 129, 27, 0.89), #0f0600 98%);
+	border: 1px outset #ccb28b;
+	border-radius: 50px;
+	margin: 0 6px 1px 6px;
+	box-shadow: 3px 3px 3px 3px #2f1107cc;
+}
+
+.yellow_guess{
+	display: inline-block;
+	min-height: 36px;
+	min-width: 36px;
+	background: linear-gradient(320deg, rgba(255, 243, 0, 0.8), rgba(229, 225, 171, 0.8) 99%), linear-gradient(20deg, rgba(108, 103, 8, 0.9), #c6c491 98%);
+	border: 1px outset #ccb28b;
+	border-radius: 50px;
+	margin: 0 6px 1px 6px;
+	box-shadow: 3px 3px 3px 3px #2f1107cc;
+}
+
+.green_guess{
+	position: relative;
+	display: inline-block;
+	min-height: 36px;
+	min-width: 36px;
+	background: linear-gradient(320deg, rgba(4, 255, 2, 0.8), rgba(201, 229, 171, 0.8) 99%), linear-gradient(20deg, rgba(17, 73, 19, 0.9), #042102 98%);
+	border: 1px outset #77b26c;
+	border-radius: 50px;
+	margin: 0 6px 1px 6px;
+	box-shadow: 3px 3px 3px 3px #2f1107cc;
+}
+
+.blue_guess{
+	position: relative;
+	display: inline-block;
+	min-height: 36px;
+	min-width: 36px;
+	background: linear-gradient(320deg, rgba(21, 102, 215, 0.8), rgba(187, 217, 225, 0.8) 99%), linear-gradient(20deg, rgba(17, 35, 73, 0.9), #020621 98%);
+	border: 1px outset #729ab8;
+	border-radius: 50px;
+	margin: 0 6px 1px 6px;
+	box-shadow: 3px 3px 3px 3px #2f1107cc;
+}
+
+.violet_guess{
+	position: relative;
+	display: inline-block;
+	min-height: 36px;
+	min-width: 36px;
+	background: linear-gradient(320deg, rgba(121, 6, 185, 0.8), rgba(129, 98, 200, 0.8) 99%), linear-gradient(20deg, rgba(120, 81, 160, 0.9), #1e0935 98%);
+	border: 1px outset #a366cc;
+	border-radius: 50px;
+	margin: 0 6px 1px 6px;
+	box-shadow: 3px 3px 3px 3px #2f1107cc;
+}
+
+.empty_guess_slot{
+	position: relative;
+	display: inline-block;
+	min-height: 36px;
+	min-width: 36px;
+	background: linear-gradient(320deg, rgba(196, 229, 227, 0.16), rgba(41, 17, 7, 0.68) 99%);
+	border: 1px inset #c0c0c0b3;
+	border-radius: 50px;
+	margin: 0 6px 1px 6px;
+}
+
+.divider{
+	display: inline-block;
+	height: 36px;
+	width: 2px;
+	background: #d2be7b;
+	padding: 0;
+	margin: 0 10px 0 10px;
+	position: relative;
+	border-right: 1px solid #424210;
+	border-bottom: 1px solid #424210;
+	box-shadow: 4px 1px 10px 0px #571212;
+	border-left: 1px solid antiquewhite;
+	border-top-left-radius: 50px;
+	border-bottom-left-radius: 50px;
+}
+
+.hint_slots_container{
+	display: inline-block;
+}
+
+.perfect_match{
+	height: 10px;
+	width: 10px;
+	background: #ff7c00;
+	margin-bottom: 3px;
+	position: relative;
+	border-radius: 20px;
+	display: inline-block;
+	border: 1px outset #ffd484;
+}
+
+.color_match{
+	height: 10px;
+	width: 10px;
+	background: #e6d9cc;
+	margin-bottom: 3px;
+	position: relative;
+	border-radius: 20px;
+	display: inline-block;
+	border: 1px outset whitesmoke;
+}
+
+.no_match{
+	height: 10px;
+	width: 10px;
+	background: #53286933;
+	margin-bottom: 3px;
+	position: relative;
+	border-radius: 20px;
+	display: inline-block;
+	border: 1px inset #c0c0c099;
+}
+
+#code_selector_container{
+	margin-top: 10px;
+}
+
+#code_selector{
+
+}
+
+#current_guess_container{
+	margin-left: 20%;
+}
+
+.slot_container{
+	position: relative;
+	display: inline-block;
+	margin-left: 4px;
+	margin-right: 4px;
+	bottom: 4px;
+	width: 50px;
+	padding: 10px;
+	text-align: center;
+	border: 2px outset #8abebdcc;
+	border-radius: 50px;
+	box-shadow: 2px 2px 1px 2px #460c0a99;
+	font-family: DarkFuture;
+}
+
+.select_dropdown{
+	height: 24px;
+	width: 40px;
+	border: 4px outset #d7da23;
+	border-radius: 40px;
+	margin-top: 2px;
+	text-align: center;
+	background: #e7f507;
+	color: #032003;
+	font-weight: 600;
+	font-size: 14px;
+	font-family: DarkFuture;
+	box-shadow: 2px 2px 1px 1px #220505;
+}
+
+#guess_or_clear_container{
+	position: relative;
+	top: 12px;
+}
+
+#guess_form{
+	display: inline-block;
+}
+
+#guess_button{
+	height: 30px;
+	width: 120px;
+	border: 2px outset #abe4a3;
+	border-top-right-radius: 50px;
+	border-top-left-radius: 50px;
+	background: #27de2acc;
+	color: #021617;
+	font-family: DarkFuture;
+	font-size: 18px;
+}
+
+#guess_button:hover{
+	cursor: pointer;
+	background: #70e521;
+}
+
+#guess_button:active{
+	border: 2px inset #abe4a3;
+	box-shadow: none;
+	background: #2baa2dcc;
+}
+
+#clear_form{
+	display: inline-block;
+	float: right;
+}
+
+#clear_button{
+	display: inline-block;
+	height: 30px;
+    width: 120px;
+    border: 2px outset #abe4a3;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+    background: #e41919cc;
+    color: #021506;
+    font-family: DarkFuture;
+    font-size: 18px;
+}
+
+#clear_button:hover{
+	cursor: pointer;
+	background: #d81134;
+}
+
+#clear_button:active{
+	border: 2px inset #abe4a3;
+	box-shadow: none;
+	background: #9f1f1fe6;
+}
+
+/* gameover.erb */
+
+#gameover_content{
+	height: 691px;
+	width: 100%;
+	background: #011501cc;
+	position: relative;
+	bottom: 46px;
+}
+
+#gameover_title{
+	position: relative;
+	text-align: center;
+	padding-top: 40px;
+	font-family: DarkFuture;
+	color: #d1bd3d;
+	font-size: 32px;
+	height: 40px;
+	margin: 22px;
+}
+
+#game_result{
+	position: relative;
+	font-family: Futura;
+	font-size: 28px;
+	text-align: center;
+	font-weight: 300;
+}
+
+.lost{
+	color: red;
+}
+
+.won{
+	color: #6adb26;
+}
+
+#showing_last_guess{
+	text-align: center;
+	font-family: Futura;
+	color: yellow;
+	font-size: 28px;
+}
+
+#showing_secret_code{
+	text-align: center;
+	font-family: Futura;
+	color: yellow;
+	font-size: 28px;
+}
+
+#gameover_footer{
+	text-align: center;
+	margin-top: 65px;
+}
+
+#play_again_button{
+	height: 80px;
+	width: 240px;
+	border: 2px outset silver;
+	border-top-left-radius: 80px;
+	border-top-right-radius: 80px;
+	font-family: DarkFuture;
+	font-size: 28px;
+	color: #2c1307;
+	background: #1dd61d;
+}
+
+#play_again_button:hover{
+	cursor: pointer;
+	box-shadow: 0px 0px 120px 6px #add2d8;
+	background: #1aa91a;
+	color: #301609;
+}
+
+#play_again_button:active{
+	border: 2px inset #92c5c4;
+	background: #0f4c0f;
+	color: #a5dddc;
+	box-shadow: 0px 0px 10px 6px #a9d5d3;
+}
+

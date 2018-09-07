@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<div id='gameover_content'>
+		<h3 id='gameover_title'>GAME OVER</h3>
+		<h4 id='game_result'>
+			<% if win_or_lose == 'You have failed to crack the code.' %>
+				<span class='lost'>
+					<%= win_or_lose %>
+				</span>
+			<% else %>
+				<span class='won'>
+					<%= win_or_lose %>
+				</span>
+			<% end %>
+		</h4>
+		<div id='showing_last_guess'>
+			<p>Your Last Guess:
+			</p>
+			<% 4.times do |index| %>
+				<% case game.rows[game.turns_left][index] %>
+				<% when 'r' %>
+					<div class='red_guess'></div>
+				<% when 'o' %>
+					<div class='orange_guess'></div>
+				<% when 'y' %>
+					<div class='yellow_guess'></div>
+				<% when 'g' %>
+					<div class='green_guess'></div>
+				<% when 'b' %>
+					<div class='blue_guess'></div>
+				<% else %>
+					<div class='violet_guess'></div>
+				<% end %>
+			<% end %>
+		</div>
+		<div id='showing_secret_code'>
+			<p>Secret Code:
+			</p>
+			<% game.secret_code.each do |color| %>
+				<% case color %>
+				<% when 'r' %>
+					<div class='red_guess'></div>
+				<% when 'o' %>
+					<div class='orange_guess'></div>
+				<% when 'y' %>
+					<div class='yellow_guess'></div>
+				<% when 'g' %>
+					<div class='green_guess'></div>
+				<% when 'b' %>
+					<div class='blue_guess'></div>
+				<% else %>
+					<div class='violet_guess'></div>
+				<% end %>
+			<% end %>
+		</div>
+		<div id='gameover_footer'>
+			<a href='/newgame'>
+				<button id='play_again_button'>Try Again?
+				</button>
+			</a>
+		</div>
+	</div>
+</html>
