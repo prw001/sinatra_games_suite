@@ -13,7 +13,7 @@ instructions = "<strong>1.</strong> Type a message in the field below.<br>
 <strong>3.</strong> Finally, click 'encrypt message' to receive your newly encrypted message below!<br>"
 default_message = 'no message'
 
-hm_title = 'Hangman'
+hm_title = 'HANGMAN'
 blank = '__'
 letter_bank = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l',
 			   'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x',

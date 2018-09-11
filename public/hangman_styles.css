@@ -27,7 +27,7 @@ body{
 	width: 100%;
 	border: 2px outset aliceblue;
 	border-radius: 2px;
-	font-family: ChalkItUp;
+	font-family: ChalkItUp, VerySimpleChalk;
 	font-size: 22px;
 }
 
@@ -46,7 +46,7 @@ body{
 	width: 900px;
 	border: 10px solid #9e5d14cc;
 	border-radius: 5px;
-	font-family: ChalkItUp;
+	font-family: ChalkItUp, VerySimpleChalk;
 	box-shadow: 1px 1px 0px 1px #191414cc;
 }
 
@@ -86,7 +86,7 @@ body{
 	height: 50px;
 	width: 70px;
 	font-size: 28px;
-	font-family: ChalkItUp;
+	font-family: ChalkItUp, VerySimpleChalk;
 	border: none;
 	text-align: center;
 	border-radius: 5px;
@@ -98,7 +98,7 @@ body{
 	position: relative;
 	left: 10px;
 	border-radius: 5px;
-	font-family: ChalkItUp;
+	font-family: ChalkItUp, VerySimpleChalk;
 	color: #dbdb49;
 	background: #3d444b;
 	font-size: 28px;
@@ -142,7 +142,7 @@ body{
 	height: 80px;
 	width: 150px;
 	border-radius: 5px;
-	font-family: ChalkItUp;
+	font-family: ChalkItUp, VerySimpleChalk;
 	font-size: 28px;
 	color: #236f14;
 	background: #9ab0c6;
