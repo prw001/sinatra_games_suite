@@ -9,6 +9,8 @@ body{
 @font-face{
 	font-family: ChalkItUp;
 	src: url('./fonts/Chalk_It_Up/DJB_Chalk_It_Up.ttf');
+	font-family: VerySimpleChalk;
+	src: url('./fonts/Very_Simple_Chalk/Very_Simple_Chalk.ttf');
 }
 
 #to_menu{
