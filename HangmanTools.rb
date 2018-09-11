@@ -1,8 +1,7 @@
 module HangmanTools
 
 	module Tools
-
-		def get_new_word
+		def get_word
 			dict = load_dict
 			return dict[rand(dict.length - 1)]
 		end
@@ -17,15 +16,15 @@ module HangmanTools
 			end
 			return dict
 		end
-	end
 
-	def create_slots(word, length)
-		open_slots = {}
-		length.times do |index|
-			letter = word[index]
-			open_slots[letter] = false
+		def create_slots(word, length)
+			open_slots = {}
+			length.times do |index|
+				letter = word[index]
+				open_slots[letter] = false
+			end
+			return open_slots
 		end
-		return open_slots
 	end
 
 	class Game
@@ -37,8 +36,8 @@ module HangmanTools
 		attr_reader :guessed_letters
 		attr_reader :turns_left
 
-		def initialize(secret_word)
-			@secret_word = secret_word
+		def initialize
+			@secret_word = get_word
 			@guess_slots = create_slots(secret_word, secret_word.length)
 			@guessed_letters = []
 			@turns_left = (secret_word.length/2 + 2)
@@ -63,6 +62,4 @@ module HangmanTools
 			@guess_slots.values.all? true ? true : false
 		end
 	end
-
-	
 end

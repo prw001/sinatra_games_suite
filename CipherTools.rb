@@ -35,4 +35,5 @@ module CipherTools
 		end
 		return cryptText
 	end
+
 end

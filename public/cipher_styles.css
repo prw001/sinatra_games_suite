@@ -1,6 +1,53 @@
 body{
-	margin: 0;
-	background: #ece9e5;
+	padding: 120px 0 0 0;
+	background: #e0e0e0;
+}
+
+#to_menu{
+	position: fixed;
+	clear: both;
+	top: 40px;
+	left: 40px;
+	height: 40px;
+	width: 80px;
+}
+
+#to_menu_button{
+	height: 100%;
+	width: 100%;
+	border: 2px outset aliceblue;
+	border-radius: 2px;
+	font-family: Futura;
+	font-size: 22px;
+	font-style: italic;
+}
+
+#to_menu_button:hover{
+	cursor: pointer;
+	background: #e0e0e0;
+}
+
+#to_menu_button:active{
+	border: none;
+}
+
+#page{
+	background: white;
+	padding-top: 80px;
+	padding-bottom: 80px;
+	z-index: 0;
+	width: 1000px;
+	margin-left: 300px;
+	border-radius: 300px;
+}
+
+#page:hover #new_message_box{
+	display: relative;
+	bottom: 40px;
+	overflow-wrap: break-word;
+	white-space: pre-line;
+	color: #042c20;
+	transition: .8s ease;
 }
 
 textarea{
@@ -13,21 +60,42 @@ option{
 
 #title_box{
 	text-align: center;
-	background: #bfa283;
-	margin-left: 35%;
+	background: gray;
+	margin-left: 20%;
 	margin-right: 35%;
-	border-radius: 4px;
-	box-shadow: 0px 1px 1px 1px lightgray;
+	border: 2px outset silver;
+	border-bottom: none;
+	border-top-right-radius: 100px;
+	border-top-left-radius: 100px;
+	box-shadow: 0px 10px 10px 7px #bff0e7;
 	height: 70px;
-	min-width: 400px;
+	min-width: 595px;
 }
 
 #main_title{
+	position: relative;
+	bottom: 146px;
 	font-size: 42px;
-	font-family: Arial, sans-serif;
-	color: #23370de6;
+	font-family: Futura;
+	font-weight: 400;
+	color: #a9d4c5;
+	text-shadow: 1px 1px #371708;
 	width: auto;
-	padding-top: 10px;
+	padding-top: 23px;
+}
+
+#highlight_title{
+	font-size: 42px;
+	font-family: Futura;
+	font-weight: 400;
+	color: #a48e1ce6;
+	text-shadow: 0px -1px antiquewhite;
+	width: auto;
+	padding-top: 23px;
+	position: relative;
+	bottom: 39px;
+	right: 1px;
+	z-index: 0;
 }
 
 #instruction_box{
@@ -50,51 +118,108 @@ option{
 }
 
 #input_form_box{
-	margin-left: 35%;
+	margin-left: 20%;
 	margin-right: 35%;
-	margin-top: 34px;
-	min-width: 400px;
+	min-width: 600px;
+}
+
+#input_form_box:hover #text_area{
+	height: 200px;
+	transition: .5s linear;
 }
 
 #message_form{
-	padding: 0 10% 0 10%;
+
 }
 
 #text_area{
 	display: block;
-	width: 100%;
-	height: 25%;
-	margin-bottom: 10px;
+	height: 20px;
+	min-width: 600px;
+	max-width: 600px;
 	border-radius: 2px;
-	border: 1px inset #134713;
+	border-top: none;
+	border-bottom: none;
+	border-left: 1px solid gainsboro;
+	border-right: 1px solid gainsboro;
+	transition: .5s linear;
+}
+
+#text_area:hover{
+	height: 200px;
+	padding: 5px;
+	transition: .5s linear;
+}
+
+#form_bottom_section{
+	height: 80px;
+	background: gray;
+	border: 2px outset silver;
+	border-top: 2px solid aliceblue;
+	border-bottom-left-radius: 100px;
+	border-bottom-right-radius: 100px;
+	box-shadow: 0px 4px 10px 4px #bff0e7;
 }
 
 #key_dropdown{
+	position: relative;
 	display: inline-block;
 	height: 40px;
+	background: #a9d4c5;
+	font-family: Futura;
 	font-size: 18px;
+	color: #070735;
+	text-align: center;
+	text-shadow: 2px 2px #cbe3de;
+	padding-left: 10px;
+	border-top: 2px outset #5e4e4e;
+	border-bottom: 2px outset #5e4e4e;
+	border-right: 2px outset #5e4e4e;
+	border-bottom-left-radius: 30px;
+	left: 200px;
+}
+
+#key_dropdown:hover{
+	cursor: pointer;
 }
 
 #submit_button{
 	position: relative;
 	display: inline-block;
-	float: right;
+	left: 195px;
 	height: 40px;
 	width: 170px;
-	border-radius: 10px;
-	background: #ebeccb;
-	borer: 2px outset #6d6161;
+	border-radius: 2px;
+	border-bottom-right-radius: 40px;
+	background: #a9d4c5;
+	border: 2px outset gray;
+	font-family: Futura;
 	font-size: 18px;
+	font-style: italic;
+	color: #070735;
+	text-align: left;
+	text-shadow: 2px 2px #cbe3de;
+}
+
+#submit_button:hover{
+	cursor: pointer;
+	background: #88c6b0;
+	box-shadow: 1px 1px 1px 1px #78958f;
 }
 
 #new_message_box{
 	position: relative;
-	margin-left: 30%;
+	left: 94px;
+	z-index: 0;
+	margin-left: 17%;
 	margin-right: 30%;
-	margin-top: 32px;
-	height: 100px;
-	min-width: 500px;
-	border: 1px solid black;
+	margin-top: 65px;
+	height: auto;
+	max-width: 500px;
+	white-space: pre-line;
+	overflow-wrap: break-word;
+	font-family: Futura;
+	color: transparent;
 	text-align: center;
 }
 

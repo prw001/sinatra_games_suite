@@ -1,56 +1,60 @@
 <html>
-	<head><link rel="stylesheet" href="cipher_styles.css"/></head>
+	<head><link rel="stylesheet" href="/cipher_styles.css"/></head>
 	<body>
+	<a id='to_menu' href='/'>
+		<button id='to_menu_button'>
+			Home
+		</button>
+	</a>
+	<div id='page'>
 		<div id="title_box">
+			<h1 id="highlight_title"><%= title %></h1>
 			<h1 id="main_title"><%= title %></h1>
 		</div>
-		<div id="instruction_box">
-			<p id="instruction_para">
-				<%= instructions %>
-			</p>
-		</div>
+		<!--instruction box was here -->
 		<div id="input_form_box">
-			<form id='message_form' action='/cipher'>
-				<textarea id='text_area' maxlength='200' name='message'></textarea> 
-				<select id='key_dropdown' name='encrypt_key' required>
-					<option value='1'>1</option>
-					<option value='2'>2</option>
-					<option value='3'>3</option>
-					<option value='4'>4</option>
-					<option value='5'>5</option>
-					<option value='6'>6</option>
-					<option value='7'>7</option>
-					<option value='8'>8</option>
-					<option value='9'>9</option>
-					<option value='10'>10</option>
-					<option value='11'>11</option>
-					<option value='12'>12</option>
-					<option value='13'>13</option>
-					<option value='14'>14</option>
-					<option value='15'>15</option>
-					<option value='16'>16</option>
-					<option value='17'>17</option>
-					<option value='18'>18</option>
-					<option value='19'>19</option>
-					<option value='20'>20</option>
-					<option value='21'>21</option>
-					<option value='22'>22</option>
-					<option value='23'>23</option>
-					<option value='24'>24</option>
-					<option value='25'>25</option>
-				</select>
-				<input id='submit_button' type='submit' value='Encrypt Message'>
+			<form id='message_form' action='/Caesar/cipher'>
+				<textarea id='text_area' maxlength='200' placeholder='Your message here...' required='true' name='message'></textarea> 
+				<div id='form_bottom_section'>
+					<select id='key_dropdown' name='encrypt_key' required>
+						<option value='1'>1</option>
+						<option value='2'>2</option>
+						<option value='3'>3</option>
+						<option value='4'>4</option>
+						<option value='5'>5</option>
+						<option value='6'>6</option>
+						<option value='7'>7</option>
+						<option value='8'>8</option>
+						<option value='9'>9</option>
+						<option value='10'>10</option>
+						<option value='11'>11</option>
+						<option value='12'>12</option>
+						<option value='13'>13</option>
+						<option value='14'>14</option>
+						<option value='15'>15</option>
+						<option value='16'>16</option>
+						<option value='17'>17</option>
+						<option value='18'>18</option>
+						<option value='19'>19</option>
+						<option value='20'>20</option>
+						<option value='21'>21</option>
+						<option value='22'>22</option>
+						<option value='23'>23</option>
+						<option value='24'>24</option>
+						<option value='25'>25</option>
+					</select>
+					<input id='submit_button' type='submit' value='Encrypt Message'>
+				</div>
 			</form>
 		</div>
-		<div id='new_message_box'>
-			<p id='new_message'>
-				<strong>Encrypted Message:</strong><br>
-				<% if @new_message %>
-					<%= @new_message %>
-				<% else %>
-					<%= default_message %>
-				<% end %>
-			</p>
-		</div>
+		<% if new_message %>
+			<div id='new_message_box'>
+				<p id='new_message'>
+					<strong>Encrypted Message:</strong><br>
+					<%= new_message %>
+				</p>
+			</div>
+		<% end %>
+	</div>
 	</body>
 </html>

@@ -1,4 +1,5 @@
 require 'sinatra'
+require 'sinatra/content_for'
 require 'sinatra/reloader'
 require_relative 'HangmanTools.rb'
 require_relative 'MastermindTools.rb'
@@ -44,23 +45,24 @@ get '/' do
 end
 
 get '/Caesar' do 
+	new_message = false
 	erb :cc_index, :locals => {:title => cc_title,
 							   :instructions => instructions,
-							   :default_message => default_message}
+							   :default_message => default_message,
+							   :new_message => new_message}
 end
 
 get '/Caesar/cipher' do 
 	message = params["message"]
 	key = params["encrypt_key"].to_i
-	ciphered_message = CipherTools::cipher(message, key)
+	ciphered_message = CaesarTools::cipher(message, key)
 	erb :cc_index, :locals => {:title => cc_title,
 							   :instructions => instructions,
 							   :new_message => ciphered_message}
 end
 
 get '/Hangman/newgame' do 
-	word = HmTools::get_new_word
-	session[:game] = HmTools::Game.new(word)
+	session[:game] = HangmanTools::Game.new
 	erb :hm_play, layout: :hm_index,
 	    :locals => {:title => hm_title, :game => session[:game],
 	    		    :blank => blank, :letter_bank => letter_bank}
@@ -71,26 +73,26 @@ get '/Hangman/guess' do
 	session[:game].guess(letter)
 	if session[:game].turns_left > 0 && !(session[:game].solved?)
 		erb :hm_play, layout: :hm_index,
-			:locals => {:title => title, :game => session[:game],
+			:locals => {:title => hm_title, :game => session[:game],
 					    :blank => blank, :letter_bank => letter_bank}
 	else
-		redirect '/gameover'
+		redirect '/Hangman/gameover'
 	end
 end
 
 get '/Hangman/gameover' do 
 	erb :hm_gameover, layout: :hm_index,
-		:locals => {:title => title, :game => session[:game]}
+		:locals => {:title => hm_title, :game => session[:game]}
 end
 
 get '/Mastermind' do 
-	erb :mm_home, layout: :mm_index, :locals => {:title => title}
+	erb :mm_home, layout: :mm_index, :locals => {:title => mm_title}
 end
 
 get '/Mastermind/newgame' do 
-	session[:game] = MmTools::Game.new
-	erb :play, layout: :index,
-		:locals => {:title => title, :game => session[:game]}
+	session[:game] = MastermindTools::Game.new
+	erb :mm_play, layout: :mm_index,
+		:locals => {:title => mm_title, :game => session[:game]}
 end
 
 get '/Mastermind/guess' do 
@@ -108,8 +110,8 @@ get '/Mastermind/guess' do
 		redirect '/Mastermind/gameover'
 	end
 
-	erb :play, layout: :index,
-		:locals => {:title => title, :game => session[:game]}
+	erb :mm_play, layout: :mm_index,
+		:locals => {:title => mm_title, :game => session[:game]}
 end
 
 get '/Mastermind/gameover' do 
@@ -119,7 +121,7 @@ get '/Mastermind/gameover' do
 		win_or_lose = "You have failed to crack the code."
 	end
 
-	erb :gameover, layout: :index,
-		:locals => {:title => title, :game => session[:game],
+	erb :mm_gameover, layout: :mm_index,
+		:locals => {:title => mm_title, :game => session[:game],
 					:win_or_lose => win_or_lose}
 end

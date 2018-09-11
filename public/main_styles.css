@@ -1,0 +1,144 @@
+a{
+	text-decoration: none;
+}
+
+a:visited{
+	text-decoration: none;
+}
+
+button{
+	border-radius: 10px;
+	box-shadow: 0px 1px 2px 1px #4d382d99;
+}
+
+body{
+	margin: 0 0 0 29%;
+	padding: 0;
+	background: #6e6e6e;
+}
+
+#main_container{
+	width: 700px;
+}
+
+#cipher_link_container{
+	margin-top: 140px;
+	height: 150px;
+	width: 700px;
+	border-top-right-radius: 300px;
+	border-top-left-radius: 300px;
+	background: #cee9e9;
+	text-align: center;
+}
+
+#to_caesar{
+	position: relative;
+	height: 110px;
+	width: 200px;
+	top: 60px;
+	background: url('images/cipher_snapshot.jpg');
+	background-repeat: no-repeat;
+	background-size: 200px;
+	background-position: -1px -35px;
+	transition: .2s ease;
+}
+
+#to_caesar:hover{
+	cursor: pointer;
+	background: url('images/cipher_snapshot_hover.jpg');
+	background-repeat: no-repeat;
+	background-size: 200px;
+	background-position: -1px -35px;
+	box-shadow: 0px 0px 20px 2px #87aac8;
+	transition: .2s ease;
+}
+
+#center_text{
+	height: 60px;
+	padding-top: 58px;
+	text-align: center;
+	font-family: Futura;
+	font-size: 26px;
+	color: #2e3945;
+}
+
+#hangman_link_container{
+	position: relative;
+	display: inline-block;
+	height: 240px;
+	width: 240px;
+	border-bottom-left-radius: 200px;
+	background: #cee9e9;
+}
+
+#to_hangman{
+	position: relative;
+	height: 200px;
+	width: 110px;
+	top: 20px;
+	left: 170px;
+	background: url('images/hangman_snapshot.jpg');
+	background-repeat: no-repeat;
+	background-size: 130px;
+	background-position-x: -11px;
+	transition: .2s ease;
+}
+
+#to_hangman:hover{
+	cursor: pointer;
+	background: url('images/hangman_snapshot_hover.jpg');
+	background-repeat: no-repeat;
+	background-size: 130px;
+	background-position-x: -11px;
+	box-shadow: 0px 0px 20px 2px #87aac8;
+	transition: .2s ease;
+}
+
+#mastermind_link_container{
+	position: relative;
+	display: inline-block;
+	float: right;
+	height: 240px;
+	width: 240px;
+	border-bottom-right-radius: 200px;
+	background: #cee9e9;
+}
+
+#to_mastermind{
+	position: relative;
+	height: 200px;
+	width: 110px;
+	top: 20px;
+	right: 40px;
+	background: url('images/mastermind_snapshot.jpg');
+	background-repeat: no-repeat;
+	background-size: 150px;
+	background-position-x: -20px;
+	transition: .2s ease;
+}
+
+#to_mastermind:hover{
+	cursor: pointer;
+	background: url('images/mastermind_snapshot_hover.jpg');
+	background-repeat: no-repeat;;
+	background-size: 150px;
+	background-position-x: -20px;
+	box-shadow: 0px 0px 20px 2px #87aac8;
+	transition: .2s ease;
+}
+
+#footer{
+	position: relative;
+	top: 160px;
+	width: 700px;
+	font-family: Arial, sans-serif;
+	font-size: 20px;
+	color: antiquewhite;
+	text-align: center;
+}
+
+#footer_link{
+	text-decoration: none;
+	color: #0b3056;
+	font-weight: 600;
+}

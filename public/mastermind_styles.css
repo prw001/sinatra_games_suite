@@ -11,6 +11,33 @@ body{
 	src: url('./fonts/Dark_Future/Dark_Future_Italic.ttf');
 }
 
+#to_menu{
+	position: fixed;
+	clear: both;
+	top: 40px;
+	left: 40px;
+	height: 40px;
+	width: 80px;
+}
+
+#to_menu_button{
+	height: 100%;
+	width: 100%;
+	border: 2px outset aliceblue;
+	border-radius: 2px;
+	font-family: DarkFuture;
+	font-size: 22px;
+}
+
+#to_menu_button:hover{
+	cursor: pointer;
+	background: #e0e0e0;
+}
+
+#to_menu_button:active{
+	border: none;
+}
+
 #main_container{
 	margin-left: 32%;
 	margin-top: 50px;

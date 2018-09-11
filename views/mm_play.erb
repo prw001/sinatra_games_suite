@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+<head><link rel='stylesheet' href='/mastermind_styles.css'/></head>
 	<div id='gameboard_container'>
 		<div id='gameboard'>
 		<div id='helper_text_column'>
@@ -55,7 +56,7 @@
 		<div id='code_selector_container'>
 			<div id='code_selector'>
 				<div id='current_guess_container'>
-					<form id='guess_form' action ='/guess'>
+					<form id='guess_form' action ='/Mastermind/guess'>
 						<% 4.times do |index| %>
 						<span class='slot_container'>
 						<%= (index + 1).to_s %><br>
@@ -72,7 +73,7 @@
 							<button id='guess_button'>Guess!
 							</button>
 					</form>
-					<form id='clear_form' action='/guess'>
+					<form id='clear_form' action='/Mastermind/guess'>
 						<button id='clear_button'>Clear
 						</button>
 					</form>
