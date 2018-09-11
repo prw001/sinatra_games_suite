@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head><link rel="stylesheet" href="/hangman_styles.css"/></head>
-<!--gameplay content -->
-<% content_for :gameplay do %>
 	<div id='letter_slots_container'>
 	<% game.secret_word.length.times do |index| %>
 		<% letter = game.secret_word[index] %>
@@ -36,15 +34,4 @@
 				<% end %>
 		</span>
 	</div>
-<% end %>
-<!-- end gameplay content -->
-
-<!-- static page content -->
-<head></head>
-	<body>
-		<div>
-			<%= yield_content :gameplay %>
-		</div>
-	</body>
-<!-- end static page content -->
 </html>

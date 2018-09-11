@@ -1,5 +1,4 @@
 require 'sinatra'
-require 'sinatra/content_for'
 require_relative 'HangmanTools.rb'
 require_relative 'MastermindTools.rb'
 require_relative 'CipherTools.rb'
