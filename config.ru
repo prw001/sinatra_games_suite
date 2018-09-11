@@ -1,2 +1,2 @@
-require './games_suite'
+require 'games_suite'
 run Sinatra::Application
