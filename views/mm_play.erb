@@ -12,8 +12,8 @@
 				<div class='guess_slots_container'>
 					<% 4.times do |slot_index| %>
 						<% if game.rows[row_index][slot_index] %>
-							<% case game.rows[row_index][slot_index] %>
-							<% when 'r' %>
+							<% case game.rows[row_index][slot_index]
+							   when 'r' %>
 								<div class='red_guess'></div>
 							<% when 'o' %>
 								<div class='orange_guess'></div>
