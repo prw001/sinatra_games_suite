@@ -5,4 +5,5 @@ https://www.theodinproject.com/courses/ruby-on-rails/lessons/sinatra-project?ref
 
 Includes Caesar Cipher, Hangman, and Mastermind
 
--In Progress-
+View on Heroku:
+https://safe-peak-15193.herokuapp.com/
