@@ -8,7 +8,7 @@ body{
 
 @font-face {
 	font-family: ChalkItUp;
-	src: url('./fonts/Chalk_It_Up/DJB_Chalk_It_Up.ttf');
+	src: font-url('./fonts/Chalk_It_Up/DJB_Chalk_It_Up.ttf');
 }
 
 #to_menu{
