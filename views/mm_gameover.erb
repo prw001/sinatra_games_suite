@@ -18,8 +18,8 @@
 			<p>Your Last Guess:
 			</p>
 			<% 4.times do |index| %>
-				<% case game.rows[game.turns_left][index] %>
-				<% when 'r' %>
+				<% case game.rows[game.turns_left][index]
+				   when 'r' %>
 					<div class='red_guess'></div>
 				<% when 'o' %>
 					<div class='orange_guess'></div>
@@ -38,8 +38,8 @@
 			<p>Secret Code:
 			</p>
 			<% game.secret_code.each do |color| %>
-				<% case color %>
-				<% when 'r' %>
+				<% case color
+				   when 'r' %>
 					<div class='red_guess'></div>
 				<% when 'o' %>
 					<div class='orange_guess'></div>
