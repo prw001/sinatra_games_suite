@@ -17,7 +17,7 @@
 			<select id='letter_dropdown' name="char">
 				<% letter_bank.each do |letter| %>
 					<% unless game.guessed_letters.include? letter %>
-							<option value="<%= letter %>"><%=letter%>
+							<option value="<%= letter %>"><%=letter.upcase%>
 							</option>
 					<% end %>
 				<% end %>
