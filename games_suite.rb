@@ -3,6 +3,8 @@ require_relative 'HangmanTools.rb'
 require_relative 'MastermindTools.rb'
 require_relative 'CipherTools.rb'
 
+config.assets.precompile << /\.(?:ttf)$/
+
 set :sessions, true
 
 use Rack::Session::Pool

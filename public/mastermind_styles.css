@@ -8,7 +8,7 @@ body{
 
 @font-face{
 	font-family: DarkFuture;
-	src: font-url('./fonts/Dark_Future/Dark_Future_Italic.ttf');
+	src: url('./fonts/Dark_Future/Dark_Future_Italic.ttf');
 }
 
 #to_menu{
